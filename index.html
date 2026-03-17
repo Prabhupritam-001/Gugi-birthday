@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Abhinandan Swain 🎂</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Floating Stars Background -->
+    <div id="floating-elements"></div>
+    <div class="bg-overlay"></div>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <div class="hero-inner">
+            <!-- Photo Frame -->
+            <div class="hero-photo-wrap">
+                <div class="photo-ring ring1"></div>
+                <div class="photo-ring ring2"></div>
+                <div class="photo-ring ring3"></div>
+                <div class="hero-photo-frame">
+                    <img src="pictures/IMG_0278.JPG" alt="Abhinandan Swain" class="hero-photo" id="hero-photo">
+                </div>
+                <div class="photo-badge">🎂 7 Today!</div>
+            </div>
+
+            <!-- Text Content -->
+            <div class="hero-content">
+                <div class="crown-emoji">👑</div>
+                <h1 class="hero-title">
+                    <span class="line1">Happy Birthday</span>
+                    <span class="line2">Abhinandan!</span>
+                </h1>
+                <p class="hero-dob">✨ Born on 28.Jun.2018 ✨</p>
+                <div class="birthday-countdown" id="birthday-countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+                <p class="hero-subtitle">Wishing you a day full of magic, laughter & endless joy! 🌈</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="celebrate-btn">🎉 Celebrate!</button>
+                    <button class="btn btn-secondary" id="play-music-btn">🎵 Play Music</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="balloons-container" id="balloons-container"></div>
+        <div class="confetti-container" id="confetti-container"></div>
+    </section>
+
+    <!-- CAKE SECTION -->
+    <section id="cake-section">
+        <div class="section-header">
+            <h2 class="section-title">Make a Wish! 🕯️</h2>
+            <p class="section-sub">Light the candle and close your eyes…</p>
+        </div>
+        <div class="cake-scene">
+            <div class="cake-plate">
+                <div class="cake-body">
+                    <div class="cake-top-layer">
+                        <div class="cake-deco">🌸</div>
+                        <div class="cake-deco">⭐</div>
+                        <div class="cake-deco">🌸</div>
+                    </div>
+                    <div class="candles-row">
+                        <div class="candle-wrap" data-n="1">
+                            <div class="candle yellow"><div class="flame" id="flame1"></div></div>
+                        </div>
+                        <div class="candle-wrap" data-n="2">
+                            <div class="candle pink"><div class="flame" id="flame2"></div></div>
+                        </div>
+                        <div class="candle-wrap" data-n="3">
+                            <div class="candle blue"><div class="flame" id="flame3"></div></div>
+                        </div>
+                        <div class="candle-wrap" data-n="4">
+                            <div class="candle green"><div class="flame" id="flame4"></div></div>
+                        </div>
+                        <div class="candle-wrap" data-n="5">
+                            <div class="candle yellow"><div class="flame" id="flame5"></div></div>
+                        </div>
+                        <div class="candle-wrap" data-n="6">
+                            <div class="candle pink"><div class="flame" id="flame6"></div></div>
+                        </div>
+                    </div>
+                    <div class="cake-mid-layer">
+                        <span class="cake-text">Happy Birthday!</span>
+                    </div>
+                    <div class="cake-base-layer"></div>
+                </div>
+            </div>
+            <div class="cake-buttons">
+                <button class="btn btn-cake" id="light-all-btn">🔥 Light All Candles</button>
+                <button class="btn btn-cake" id="blow-btn">💨 Blow Out</button>
+            </div>
+            <div class="wish-message" id="wish-message"></div>
+        </div>
+    </section>
+
+    <!-- MEMORY GALLERY -->
+    <section id="gallery">
+        <div class="section-header">
+            <h2 class="section-title">Memory Gallery 📸</h2>
+            <p class="section-sub" id="photo-count-text">Loading memories…</p>
+        </div>
+
+        <div class="gallery-wrapper">
+            <button class="nav-btn" id="prev-btn">&#8249;</button>
+            <div class="gallery-track-wrap">
+                <div class="gallery-track" id="gallery-track">
+                    <!-- Cards injected by JS -->
+                </div>
+            </div>
+            <button class="nav-btn" id="next-btn">&#8250;</button>
+        </div>
+
+        <div class="gallery-dots" id="gallery-dots"></div>
+        <p class="gallery-hint">Click any photo to view full size</p>
+    </section>
+
+    <!-- PHOTO MODAL -->
+    <div id="photo-modal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-box">
+            <button class="modal-close" id="close-modal" aria-label="Close">✕</button>
+            <img class="modal-img" id="modal-img" src="" alt="">
+            <div class="modal-caption" id="modal-caption"></div>
+            <div class="modal-nav">
+                <button class="modal-nav-btn" id="modal-prev">&#8249;</button>
+                <button class="modal-nav-btn" id="modal-next">&#8250;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUDIO -->
+    <audio id="birthday-music" loop>
+        <source src="Birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
