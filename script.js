@@ -12,7 +12,7 @@
 
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
 
-const PICTURES_DIR = 'pictures/';
+const PICTURES_DIR = 'Pictures/';
 
 // Filenames to probe (add your own filenames here if needed)
 const PROBE_NAMES = [];
